@@ -1,0 +1,166 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: black;
+	background-image:  
+    radial-gradient(circle, rgba(255,255,255,0.8) 15%, transparent 30%),
+    radial-gradient(circle, rgba(255,255,255,0.8) 15%, transparent 30%);
+    background-size: 50px 50px;
+    animation-duration: 30s;
+    animation-name: disco;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes disco {
+  from {
+    background-image: radial-gradient(circle, #809fff 15%, transparent 40%);
+  }
+  25% {
+  	background-image: radial-gradient(circle, #ff3333 20%, transparent 40%);
+  }
+  50% {
+  	background-image: radial-gradient(circle, #33FF66 20%, transparent 40%);
+  }
+  
+  70% {
+  	background-image: radial-gradient(circle, #CC33CC 20%, transparent 40%);
+  }
+  to {
+
+    background-position: 800px 0;
+  }
+}
+
+/*hanger*/
+div.hanger {
+  background: #fff;
+  width: 4px;
+  border-right: 1px solid #ddd;
+  height: 56px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+}
+
+/*ball*/
+div.ball {
+	position: relative;
+	background: #262626;
+	border: 0.1px solid #f2f2f2;
+	border-radius: 70%;
+	box-shadow: -1px -1px 20px 17px rgba(242, 242, 242, 0.4);
+	width: 300px;
+	position: flex;
+	text-align: center;
+	overflow: hidden;
+	margin: 0 auto;
+	top: 50px;
+	z-index: 5;
+}
+
+.ball:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 54px;
+  right: 40px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.2;
+  border-radius: 100%; 
+  animation-duration: 3s;
+  animation-name: sparkle;
+  background: radial-gradient(circle,  #fff, #a6a6a6);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.ball:before {
+  z-index: 1;
+  content: '';
+  display: block;
+  position: absolute;
+  top: 95px;
+  right: 10px;
+  height: 30px;
+  width: 28px;
+  border-radius: 100%;
+  opacity: 0.2;
+  background: radial-gradient(circle,  #fff, #a6a6a6);
+  animation-duration: 3s;
+  animation-name: sparkle;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0.5s;
+}
+
+@keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 45px;
+    height: 35px;  
+  }
+  70% {
+  	opacity: 0.6;
+  }
+  90% {
+  	opacity: 0.2;
+  }
+  to {
+    margin-right: 290px;
+    opacity: 0;
+  }
+}
+
+
+/*row*/
+div.row {
+	position: relative;
+	top: 0;
+	left: 0;
+	min-width: 370px;
+	text-align: center;
+	margin: -5px;
+	animation-name: move;
+	animation-iteration-count: infinite;
+	animation-duration: 2.7s;
+	animation-timing-function: linear;	
+}
+
+@keyframes move {
+    from {
+    	left: -60px;
+    }
+    to {left: 0px;
+    }
+}
+
+/*square*/
+div.square {
+	width: 11px;
+	height: 10px;
+	background: radial-gradient(circle, rgba(255,255,255,0.8) 81%, transparent 0%);
+	display: inline-block;
+	margin: -1.5px;
+	filter: brightness(110%);
+	/*filter: invert()*/;
+}
+
+
+
+
+
+
+
+
+
+
+
