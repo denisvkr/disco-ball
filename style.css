@@ -8,7 +8,7 @@ body {
     radial-gradient(circle, rgba(255,255,255,0.8) 15%, transparent 30%),
     radial-gradient(circle, rgba(255,255,255,0.8) 15%, transparent 30%);
     background-size: 50px 50px;
-    animation-duration: 30s;
+    animation-duration: 40s;
     animation-name: disco;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -24,13 +24,11 @@ body {
   50% {
   	background-image: radial-gradient(circle, #33FF66 20%, transparent 40%);
   }
-  
   70% {
   	background-image: radial-gradient(circle, #CC33CC 20%, transparent 40%);
   }
   to {
-
-    background-position: 800px 0;
+    background-position: 1000px 0;
   }
 }
 
@@ -51,7 +49,7 @@ div.ball {
 	background: #262626;
 	border: 0.1px solid #f2f2f2;
 	border-radius: 70%;
-	box-shadow: -1px -1px 20px 17px rgba(242, 242, 242, 0.4);
+	box-shadow: -2px -2px 20px 22px rgba(242, 242, 242, 0.4);
 	width: 300px;
 	position: flex;
 	text-align: center;
@@ -100,7 +98,7 @@ div.ball {
 @keyframes sparkle {
   from {
     margin-right: -45px;
-    opacity: 0.2;
+    opacity: 0.4;
   }
   50% {
     opacity: 0.9;
@@ -150,17 +148,6 @@ div.square {
 	background: radial-gradient(circle, rgba(255,255,255,0.8) 81%, transparent 0%);
 	display: inline-block;
 	margin: -1.5px;
-	filter: brightness(110%);
+	filter: brightness(105%);
 	/*filter: invert()*/;
 }
-
-
-
-
-
-
-
-
-
-
-
