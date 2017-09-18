@@ -5,32 +5,91 @@
 body {
 	background: black;
 	background-image:  
-    radial-gradient(circle, rgba(255,255,255,0.8) 15%, transparent 30%),
-    radial-gradient(circle, rgba(255,255,255,0.8) 15%, transparent 30%);
-    background-size: 50px 50px;
-    animation-duration: 40s;
+    radial-gradient(circle, rgba(255,255,255,0.8) 15%, transparent 40%);
+    background-size: 35px 35px;
+    -webkit-animation: disco 40s linear infinite;
+    -moz-animation: disco 40s linear infinite;
+    -o-animation: disco 40s linear infinite;
+    animation: disco 40s linear infinite;
+/*  animation-duration: 40s;
     animation-name: disco;
     animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: linear;*/
 }
 
 @keyframes disco {
   from {
+    background-image: radial-gradient(circle, #809fff 20%, transparent 40%);
+  }
+  25% {
+    background-image: radial-gradient(circle, #ff3333 20%, transparent 40%);
+  }
+  50% {
+    background-image: radial-gradient(circle, #33FF66 20%, transparent 40%);
+  }
+  70% {
+    background-image: radial-gradient(circle, #CC33CC 20%, transparent 40%);
+  }
+  to {
+    background-position: 1700px 0;
+  }
+}
+
+@-webkit-keyframes disco {
+  from {
     background-image: radial-gradient(circle, #809fff 15%, transparent 40%);
   }
   25% {
-  	background-image: radial-gradient(circle, #ff3333 20%, transparent 40%);
+    background-image: radial-gradient(circle, #ff3333 20%, transparent 40%);
   }
   50% {
-  	background-image: radial-gradient(circle, #33FF66 20%, transparent 40%);
+    background-image: radial-gradient(circle, #33FF66 20%, transparent 40%);
   }
   70% {
-  	background-image: radial-gradient(circle, #CC33CC 20%, transparent 40%);
+    background-image: radial-gradient(circle, #CC33CC 20%, transparent 40%);
   }
   to {
-    background-position: 1000px 0;
+    background-position: 400px 0;
   }
 }
+
+@-moz-keyframes disco {
+  from {
+    background-image: radial-gradient(circle, #809fff 15%, transparent 40%);
+  }
+  25% {
+    background-image: radial-gradient(circle, #ff3333 20%, transparent 40%);
+  }
+  50% {
+    background-image: radial-gradient(circle, #33FF66 20%, transparent 40%);
+  }
+  70% {
+    background-image: radial-gradient(circle, #CC33CC 20%, transparent 40%);
+  }
+  to {
+    background-position: 600px 0;
+  }
+}
+
+@-o-keyframes disco {
+  from {
+    background-image: radial-gradient(circle, #809fff 15%, transparent 40%);
+  }
+  25% {
+    background-image: radial-gradient(circle, #ff3333 20%, transparent 40%);
+  }
+  50% {
+    background-image: radial-gradient(circle, #33FF66 20%, transparent 40%);
+  }
+  70% {
+    background-image: radial-gradient(circle, #CC33CC 20%, transparent 40%);
+  }
+  to {
+    background-position: 2000px 0;
+  }
+}
+
+
 
 /*hanger*/
 div.hanger {
@@ -49,8 +108,9 @@ div.ball {
 	background: #262626;
 	border: 0.1px solid #f2f2f2;
 	border-radius: 70%;
-	box-shadow: -2px -2px 20px 22px rgba(242, 242, 242, 0.4);
-	width: 300px;
+	box-shadow: -2px -2px 20px 22px rgba(242, 242, 242, 0.35);
+	width: 275px;
+  height: 275px;
 	position: flex;
 	text-align: center;
 	overflow: hidden;
@@ -63,17 +123,21 @@ div.ball {
   content: '';
   display: block;
   position: absolute;
-  top: 54px;
+  top: 58px;
   right: 40px;
   height: 30px;
   width: 30px;
   opacity: 0.2;
   border-radius: 100%; 
-  animation-duration: 3s;
-  animation-name: sparkle;
   background: radial-gradient(circle,  #fff, #a6a6a6);
+  -webkit-animation: sparkle 4s linear infinite;
+  -moz-animation: sparkle 4s linear infinite;
+  -o-animation: sparkle 4s linear infinite;
+  animation: sparkle 4s linear infinite;
+/*  animation-name: sparkle;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear;*/
 }
 
 .ball:before {
@@ -81,18 +145,22 @@ div.ball {
   content: '';
   display: block;
   position: absolute;
-  top: 95px;
+  top: 110px;
   right: 10px;
   height: 30px;
   width: 28px;
   border-radius: 100%;
   opacity: 0.2;
   background: radial-gradient(circle,  #fff, #a6a6a6);
-  animation-duration: 3s;
+  -webkit-animation: sparkle 4s linear 0.5s infinite;
+  -moz-animation: sparkle 4s linear 0.5s infinite;
+  -o-animation: sparkle 4s linear 0.5s infinite;
+  animation: sparkle 4s linear 0.5s infinite;
+/*  animation-duration: 3s;
   animation-name: sparkle;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  animation-delay: 0.5s;
+  animation-delay: 0.5s;*/
 }
 
 @keyframes sparkle {
@@ -118,6 +186,75 @@ div.ball {
   }
 }
 
+@-webkit-keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 45px;
+    height: 35px;  
+  }
+  70% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  to {
+    margin-right: 290px;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 45px;
+    height: 35px;  
+  }
+  70% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  to {
+    margin-right: 290px;
+    opacity: 0;
+  }
+}
+
+@-o-keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 45px;
+    height: 35px;  
+  }
+  70% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  to {
+    margin-right: 290px;
+    opacity: 0;
+  }
+}
+
 
 /*row*/
 div.row {
@@ -127,15 +264,43 @@ div.row {
 	min-width: 370px;
 	text-align: center;
 	margin: -5px;
-	animation-name: move;
+  -webkit-animation: move 3s linear infinite;
+  -moz-animation: move 3s linear infinite;
+  -o-animation: move 3s linear infinite;
+  animation: move 3s linear infinite;
+/*	animation-name: move;
 	animation-iteration-count: infinite;
-	animation-duration: 2.7s;
-	animation-timing-function: linear;	
+	animation-duration: 2s;
+	animation-timing-function: linear;*/	
 }
 
 @keyframes move {
     from {
     	left: -60px;
+    }
+    to {left: 0px;
+    }
+}
+
+@-webkit-keyframes move {
+    from {
+      left: -60px;
+    }
+    to {left: 0px;
+    }
+}
+
+@-moz-keyframes move {
+    from {
+      left: -60px;
+    }
+    to {left: 0px;
+    }
+}
+
+@-o-keyframes move {
+    from {
+      left: -60px;
     }
     to {left: 0px;
     }
@@ -149,5 +314,4 @@ div.square {
 	display: inline-block;
 	margin: -1.5px;
 	filter: brightness(105%);
-	/*filter: invert()*/;
 }
