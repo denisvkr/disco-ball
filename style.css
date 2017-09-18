@@ -96,7 +96,7 @@ div.hanger {
   background: #fff;
   width: 4px;
   border-right: 1px solid #ddd;
-  height: 56px;
+  height: 60px;
   position: absolute;
   top: 0px;
   left: 50%;
@@ -115,7 +115,7 @@ div.ball {
 	text-align: center;
 	overflow: hidden;
 	margin: 0 auto;
-	top: 50px;
+	top: 54px;
 	z-index: 5;
 }
 
@@ -314,4 +314,83 @@ div.square {
 	display: inline-block;
 	margin: -1.5px;
 	filter: brightness(105%);
+}
+
+/*responsive*/
+@media all and (min-width: 575px) {
+  body { 
+    background-size: 40px 40px;
+  }
+
+  div.hanger {
+  width: 5px;
+  height: 78px;
+  }
+
+  div.ball {
+  width: 350px;
+  height: 350px;
+  top: 78px;
+  }
+
+ .ball:after {
+  height: 35px;
+  width: 35px;
+  }
+
+ .ball:before {
+  height: 35px;
+  width: 33px;
+  }
+
+ div.row {
+  min-width: 465px;
+  margin: -2px;
+  margin-left: -6px; 
+  }
+
+
+ div.square {
+  width: 14px;
+  height: 14px;
+  }
+}
+
+@media all and (min-width: 960px) {
+  body { 
+    background-size: 45px 45px;
+  }
+
+  div.hanger {
+  width: 5px;
+  height: 80px;
+  }
+
+  div.ball {
+  width: 450px;
+  height: 450px;
+  top: 80px;
+  }
+
+ .ball:after {
+  height: 35px;
+  width: 35px;
+  }
+
+ .ball:before {
+  height: 35px;
+  width: 33px;
+  }
+
+ div.row {
+  min-width: 616px;
+  margin: 1px;
+  margin-left: -5px;
+  }
+
+
+ div.square {
+  width: 19px;
+  height: 17px;
+  }
 }
