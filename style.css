@@ -373,13 +373,13 @@ div.square {
   }
 
  .ball:after {
-  height: 35px;
-  width: 35px;
+  height: 42px;
+  width: 42px;
   }
 
  .ball:before {
-  height: 35px;
-  width: 33px;
+  height: 42px;
+  width: 40px;
   }
 
  div.row {
@@ -393,4 +393,98 @@ div.square {
   width: 19px;
   height: 17px;
   }
+
+  /*keyframe for "sparkle"*/
+  @keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.4;
+    }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 57px;
+    height: 46px;  
+    }
+  70% {
+    opacity: 0.6;
+    }
+  90% {
+    opacity: 0.2;
+    }
+  to {
+    margin-right: 380px;
+    opacity: 0;
+    }
+  }
+
+ @-webkit-keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.4;
+    }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 57px;
+    height: 46px;   
+    }
+  70% {
+    opacity: 0.6;
+    }
+  90% {
+    opacity: 0.2;
+    }
+  to {
+    margin-right: 290px;
+    opacity: 0;
+    }
+  }
+
+ @-moz-keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.4;
+    }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 57px;
+    height: 46px;    
+    }
+  70% {
+    opacity: 0.6;
+    }
+  90% {
+    opacity: 0.2;
+    }
+  to {
+    margin-right: 290px;
+    opacity: 0;
+    }
+  }
+
+ @-o-keyframes sparkle {
+  from {
+    margin-right: -45px;
+    opacity: 0.4;
+    }
+  50% {
+    opacity: 0.9;
+    filter: brightness(300%);
+    width: 57px;
+    height: 46px;   
+    }
+  70% {
+    opacity: 0.6;
+    }
+  90% {
+    opacity: 0.2;
+    }
+  to {
+    margin-right: 290px;
+    opacity: 0;
+    }
+  }
 }
+
